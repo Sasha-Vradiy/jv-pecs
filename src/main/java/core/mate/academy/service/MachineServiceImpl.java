@@ -4,6 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,8 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         if (producer == null) {
             return List.of();
         }
-        return (List<T>) producer.get();
+        List<? extends Machine> machines = producer.get();
+        return new ArrayList<>((List<T>) machines);
     }
 
     @Override

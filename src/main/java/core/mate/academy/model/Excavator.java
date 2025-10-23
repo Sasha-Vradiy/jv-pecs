@@ -18,6 +18,9 @@ public class Excavator extends Machine {
     public double getBucketCapacityCubikMeters() {
         return bucketCapacityCubikMeters;
     }
+    public void setBucketCapacityCubicMeters(double bucketCapacityCubicMeters) {
+        this.bucketCapacityCubikMeters = bucketCapacityCubicMeters;
+    }
 
     @Override
     public void doWork() {
