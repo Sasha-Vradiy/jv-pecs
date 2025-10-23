@@ -19,6 +19,10 @@ public class Truck extends Machine {
         return maxPayLoad;
     }
 
+    public void setMaxPayLoad(int maxPayLoad) {
+        this.maxPayLoad = maxPayLoad;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
